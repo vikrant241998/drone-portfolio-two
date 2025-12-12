@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
-import '../styles/header.css'
+import '../styles/header.css';
+
 interface NavLink {
   label: string;
   href: string;

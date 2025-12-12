@@ -123,8 +123,8 @@
   }
 
   .hero:after {
-    height: 150px;
-    transform: skewY(2.5deg) translateY(60px);
+    transform: skewY(2.5deg) translateY(37px);
+    height: 70px;
   }
 }
 
@@ -146,5 +146,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+    .hero:after {
+    transform: skewY(4.5deg) translateY(37px);
+    height: 70px;
   }
 }

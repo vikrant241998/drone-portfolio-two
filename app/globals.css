@@ -1,10 +1,9 @@
 @import "tailwindcss";
 
-
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* .container-cover{
-  border: 2px solid red;
-} */
+html {
+  scroll-behavior: smooth;
+}
