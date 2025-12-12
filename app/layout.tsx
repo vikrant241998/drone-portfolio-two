@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 // Default font import
 import { Inter } from "next/font/google"; 
 import "./globals.css";
-
+import Header from "./components/Header";
 // Inter font ko load kiya, jo Next.js ka default suggest kiya hua font hai
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +21,10 @@ export default function RootLayout({
     <html lang="en">
       {/* Body mein ab sirf Inter font ka className use hoga */}
       <body className={inter.className}>
+
+        <Header/>
         {children}
+        
       </body>
     </html>
   );
