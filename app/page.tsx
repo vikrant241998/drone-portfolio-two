@@ -26,6 +26,7 @@ const page = () => {
   return (
     <>
       <section
+      id="/"
         className="hero"
         style={{ backgroundImage: `url(${currentImageUrl})` }}
       >

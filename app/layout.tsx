@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import About from './about-us/page'
+import Contact from './contact-us/page'
+
 // Inter font ko load kiya, jo Next.js ka default suggest kiya hua font hai
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +28,7 @@ export default function RootLayout({
         <Header/>
         {children}
         <About/>
+        <Contact/>
       </body>
     </html>
   );

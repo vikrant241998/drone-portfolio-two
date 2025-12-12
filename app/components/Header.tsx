@@ -8,11 +8,11 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { label: 'HOME', href: '#home' },
+  { label: 'HOME', href: '#/' },
   { label: 'ABOUT', href: '#about-us' },
   { label: 'PORTFOLIO', href: '#portfolio' },
   { label: 'SERVICES', href: '#services' },
-  { label: 'CONTACT', href: '#contact' },
+  { label: 'CONTACT', href: '#contact-us' },
 ];
 
 const Header: React.FC = () => {
