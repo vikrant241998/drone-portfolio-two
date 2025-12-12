@@ -1,0 +1,197 @@
+/* ==================================== */
+/* PORTFOLIO SECTION BASE STYLES */
+/* ==================================== */
+
+.portfolio-section {
+  background-color: #f8f8f8;
+  padding: 80px 0;
+  clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 92%);
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section Heading Style */
+/* Section Heading Style - Updated for Left Alignment */
+.portfolio-wrapper h2 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 40px;
+  text-align: left;
+  position: relative;
+}
+.portfolio-wrapper h2::after {
+  content: "";
+  position: absolute;
+  left: 0; /* Left align underline */
+  transform: translateX(0); /* Center alignment hata diya */
+  bottom: -10px;
+  width: 60px;
+  height: 3px;
+  background-color: #f1c40f;
+}
+
+/* --- 1. Portfolio Grid Handler (3 Columns) --- */
+.portfolio-handler {
+  display: grid;
+  /* Desktop: 3 equal columns */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* --- 2. Image Card Styling --- */
+.portfolio-img-card {
+  position: relative;
+  overflow: hidden; /* Hover zoom ko card ke andar rakhega */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+
+  /* Height maintain karne ke liye (3:2 ratio approx) */
+  padding-bottom: 66%;
+  height: 0;
+}
+
+.portfolio-img-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* Image Hover Animation */
+  transition: transform 0.4s ease-out;
+}
+
+/* --- 3. Hover Overlay (Text) --- */
+.item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* Initial state: Hidden */
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+  z-index: 10;
+}
+
+.overlay-content h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.overlay-content p {
+  font-size: 14px;
+  color: #f1c40f;
+}
+
+/* --- 4. HOVER EFFECTS --- */
+.portfolio-img-card:hover .item-overlay {
+  opacity: 1; /* Overlay visible */
+}
+
+.portfolio-img-card:hover img {
+  transform: scale(1.08); /* Image zoom */
+}
+
+/* ==================================== */
+/* 5. LOAD MORE / SHOW LESS BUTTONS */
+/* ==================================== */
+
+.load-more-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Base button style for both Load More and Show Less */
+.portfolio-btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+  margin: 0 10px; /* Do buttons ke beech thoda space */
+  text-transform: uppercase;
+}
+
+/* Load More Button Style (Dark/Primary) */
+.load-more-btn {
+  color: #fff;
+  cursor: pointer;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+.load-more-btn:hover {
+  color: #000;
+  background-color: #f1c40f;
+}
+
+/* Show Less Button Style (Secondary/Outline) */
+/* Ye class React component mein Show Less button par use hogi */
+.show-less-btn {
+  color: #fff;
+  cursor: pointer;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+.show-less-btn:hover {
+  color: #000;
+  background-color: #f1c40f;
+}
+
+/* ==================================== */
+/* 6. RESPONSIVENESS */
+/* ==================================== */
+
+@media (max-width: 992px) {
+  /* Tablet: 2 columns */
+  .portfolio-handler {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .portfolio-section {
+    clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 95%);
+  }
+}
+
+@media (max-width: 768px) {
+    .portfolio-section {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+}
+}
+@media (max-width: 600px) {
+  /* Mobile: 1 column */
+  .portfolio-handler {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .portfolio-wrapper h2 {
+    font-size: 32px;
+  }
+}

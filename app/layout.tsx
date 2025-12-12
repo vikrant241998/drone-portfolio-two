@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import About from './about-us/page'
+import Portfolio from './portfolio/page'
 import Contact from './contact-us/page'
 
 // Inter font ko load kiya, jo Next.js ka default suggest kiya hua font hai
@@ -20,6 +21,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
       {/* Body mein ab sirf Inter font ka className use hoga */}
@@ -28,6 +30,7 @@ export default function RootLayout({
         <Header/>
         {children}
         <About/>
+        <Portfolio/>
         <Contact/>
       </body>
     </html>
