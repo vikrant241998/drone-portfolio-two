@@ -7,7 +7,7 @@ function page() {
       <div id="about-us">
         <div className="about-container">
           <div className="about-wrapper">
-            <h2>About US</h2>
+            <h2 data-aos="fade-up-right"  > About US</h2>
           </div>
 
           <div className="about-handler">
@@ -22,11 +22,16 @@ function page() {
                 alias quas optio, assumenda nemo sit tenetur. Blanditiis,
                 laboriosam nesciunt!
               </p>
-              <div className="about-btn">
+              <div className="about-btn" data-aos="fade-up-right">
                 <button>Contact us </button>
               </div>
             </div>
-            <div className="about-img"></div>
+            <div
+              className="about-img"
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
+            ></div>
           </div>
         </div>
       </div>

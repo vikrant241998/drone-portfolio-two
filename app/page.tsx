@@ -32,13 +32,13 @@ const page = () => {
       >
         <div className="container">
           <div className="hero-content-overlay">
-            <div className="hero-content">
-              <h1>
+            <div className="hero-content" data-aos="zoom-in-down">
+              <h1 >
                 Where <br /> <span className="highlight">Creativity </span>{" "}
                 Takes Flight.
               </h1>
-              <div className="check-it animate-button">
-                <div className="button-icon-wrapper"> &#x27A4; </div>
+              <div className="check-it animate-button" >
+                <div className="button-icon-wrapper" > &#x27A4; </div>
                 Get in touch
               </div>
             </div>

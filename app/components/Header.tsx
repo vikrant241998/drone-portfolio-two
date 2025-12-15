@@ -11,15 +11,12 @@ const navLinks: NavLink[] = [
   { label: 'HOME', href: '#/' },
   { label: 'ABOUT', href: '#about-us' },
   { label: 'PORTFOLIO', href: '#portfolio' },
-  // { label: 'SERVICES', href: '#services' },
   { label: 'CONTACT', href: '#contact-us' },
 ];
 
 const Header: React.FC = () => {
-  // Mobile menu state
   const [isOpen, setIsOpen] = useState(false);
 
-  // Hamburger button click handler
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -40,7 +37,6 @@ const Header: React.FC = () => {
           <span className="hamburger-line"></span>
         </button>
 
-        {/* Desktop Navigation */}
         <nav className={`nav ${isOpen ? 'nav-open' : ''}`}>
           {navLinks.map((link) => (
             <a 
