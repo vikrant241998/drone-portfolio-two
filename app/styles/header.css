@@ -1,13 +1,17 @@
 .header {
-  background-color: #00000012;
+  background: transparent;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 10;
   padding: 20px 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-
+.header-scrolled {
+  background-color: #000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -74,7 +78,7 @@
 
   .logo {
     font-size: 20px;
-}
+  }
 
   .nav {
     display: none;
